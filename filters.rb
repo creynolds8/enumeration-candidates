@@ -20,7 +20,8 @@ def experienced?(candidate)
     return false
   end
 end
-  
+
+# should extract each if statement to a helper method
 def qualified_candidates(candidates)
   # Your code Here
   qualified_candidates_arr = []
@@ -38,6 +39,8 @@ def qualified_candidates(candidates)
   qualified_candidates_arr
 end
   
-  
-puts qualified_candidates @candidates
-  # More methods will go below
+# More methods will go below
+
+def order_by_qualifications(candidates)
+  candidates.sort_by { |candidate| [candidate[:years_of_experience], candidate[:github_points]]}
+end
