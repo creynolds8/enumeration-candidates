@@ -42,5 +42,6 @@ end
 # More methods will go below
 
 def order_by_qualifications(candidates)
-  candidates.sort_by { |candidate| [candidate[:years_of_experience], candidate[:github_points]]}
+  candidates.sort_by { |candidate| [candidate[:years_of_experience], -candidate[:github_points]]}
 end
+puts order_by_qualifications(@candidates)
