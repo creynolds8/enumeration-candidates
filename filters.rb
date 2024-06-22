@@ -1,8 +1,6 @@
 # In this file we define the methods to help filter out candidates
 # This way, we keep these methods separated from other potential parts of the program
 
-require "./candidates"
-
 def find(id)
   # Your code Here
   candidates.each do |candidate| 
@@ -44,4 +42,3 @@ end
 def order_by_qualifications(candidates)
   candidates.sort_by { |candidate| [candidate[:years_of_experience], -candidate[:github_points]]}
 end
-puts order_by_qualifications(@candidates)
